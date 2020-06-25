@@ -9,13 +9,20 @@
         My swell Nuxt.js project
       </h2>
       <div class="mt-3">
-        <button-primary href="https://nuxtjs.org/">
-          Documentation
-        </button-primary>
-
-        <button-secondary href="https://github.com/nuxt/nuxt.js">
-          GitHub
-        </button-secondary>
+        <a
+          class="btn btn-lg btn-outline-primary"
+          href="https://nuxtjs.org/"
+          target="_blank"
+          role="button"
+          >Documentation</a
+        >
+        <a
+          class="btn btn-lg btn-outline-secondary"
+          href="https://github.com/nuxt/nuxt.js"
+          target="_blank"
+          role="button"
+          >GitHub</a
+        >
       </div>
     </div>
   </div>
@@ -23,12 +30,16 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars,no-unused-vars
+import bootstrap from 'bootstrap'
 import Logo from '@/components/Logo.vue'
 import ButtonPrimary from '~/components/ButtonPrimary.vue'
 import ButtonSecondary from '~/components/ButtonSecondary.vue'
 
 @Component({ components: { ButtonPrimary, ButtonSecondary, Logo } })
-export default class Index extends Vue {}
+export default class Bootstrap extends Vue {}
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import '~bootstrap/scss/bootstrap';
+</style>
